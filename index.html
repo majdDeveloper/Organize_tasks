@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="js" href="js/code.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Add-tasks</title>
+  </head>
+
+  <body>
+    <!-- start task -->
+    <section class="task">
+      <div class="container">
+        <div class="info">
+          <h1>Welcome to the diary</h1>
+          <p>Organize your time and tasks</p>
+        </div>
+        <form action="">
+          <input type="text" name="title_task" class="title" placeholder="Task Name" />
+          <textarea class="text" name="details" placeholder="Task Description"></textarea>
+          <input type="submit" value="Add Task" class="submit" />
+        </form>
+        <!--start result tasks -->
+        <div class="result" data-=""></div>
+        <!--end result tasks -->
+        <!-- delete all created by task  -->
+        <div class="delAll">Delete All Tasks</div>
+      </div>
+    </section>
+    <!-- end task -->
+    <!-- Start wave -->
+    <div class="wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+        fill="rgb(0 94 204)"
+        fill-opacity="1"
+        d="M0,64L60,58.7C120,53,240,43,360,74.7C480,107,600,181,720,186.7C840,192,960,128,1080,96C1200,64,1320,64,1380,64L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        style="--darkreader-inline-fill: #004ba3"
+        data-darkreader-inline-fill=""
+        ></path>
+      </svg>
+    </div>
+    <!-- End wave -->
+    <!-- my email -->
+    <div class="container">
+      <div class="info">
+        <h1>contact with me</h1>
+        <p>majd.developer1@gmail.com</p>
+      </div>
+    </div>
+    <script src="./code.js"></script>
+  </body>
+</html>

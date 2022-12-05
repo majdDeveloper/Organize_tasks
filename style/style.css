@@ -1,0 +1,177 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  direction: ltr;
+  box-sizing: border-box;
+  background-color: #202731;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Start scrollbar */
+::-webkit-scrollbar {
+  background-color: rgb(31 34 35);;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(69 74 77);
+}
+/* End scrollbar */
+/* responsive design */
+@media (min-width: 797px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 1017px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1216px) {
+  .container {
+    width: 1170px;
+  }
+}
+.task {
+  margin-bottom: 200px;
+}
+.info {
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #eee;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 40px;
+}
+.info p {
+  font-size: 20px;
+}
+.wave {
+  position: fixed;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+form {
+  background-color: #E0D8B0;
+  padding: 20px 30px;
+  display: grid;
+  max-width: 600px;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+/* title task */
+.title {
+  max-width: 70%;
+  min-width: 5px;
+  max-height: 30px;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+}
+/* task details */
+.text {
+  min-width: 95%;
+  max-width: 95%;
+  min-height: 108px;
+  max-height: 108px;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+@media (max-width: 368px) {
+  .title {
+    font-size: 10px;
+    max-height: 0px;
+  }
+  .text {
+    font-size: 10px;
+  }
+}
+/* add Task */
+.submit {
+  border-radius: 10px;
+  padding: 5px 0;
+  background-color: #14C38E;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+.submit:hover {
+  transform: translateY(-1px);
+  background-color: rgb(3, 136, 87);
+}
+/* create task */
+.result div {
+  max-width: 500px;
+  height: 100px;
+  padding: 0 10px;
+  margin: 20px auto;
+  background-color: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.result div p {
+  background-color: #E0D8B0;
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  padding: 15px 2px 0px 15px;
+  border-radius: 10px;
+}
+
+.result div i {
+  color: white;
+  padding: 15px 20px;
+  margin-left: 10px;
+  font-size: 19px;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 10px;
+}
+.result div #delete {
+  background-color: #FF1E1E;
+}
+.result div #delete:hover {
+  background-color: #CF0A0A;
+}
+.result div #show {
+  background-color: #2794EB;
+}
+.result div #show:hover {
+  background-color: #395EA6;
+}
+.delAll {
+  width: fit-content;
+  margin: 20px auto;
+  background-color: red;
+  font-size: 25px;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  transition: 0.2s;
+}
