@@ -17,12 +17,13 @@ getDataFromLocalStorage();
 // add task for arrayTasks and result
 add_task.onclick = function(ele) {
     ele.preventDefault();
-    if(input.value != "" && description.value != "") {
+    if(isNaN(input.value) && isNaN(description.value)) {
         createElement(input, description);
         addElementForPage(arrayTasks);
         window.localStorage.setItem("tasks", JSON.stringify(arrayTasks));
     }
 }
+
 // add task for arrayTasks
 function createElement(title, word) {
     let task = {
@@ -82,13 +83,13 @@ result.addEventListener("click", (e) => {
         arrayTasks.forEach((task) => {
             if (task.id == e.target.parentElement.getAttribute("data-id")) {
                 arrayTasks.pop(task);
+                check_del();
                 // To delete the task from arrayTasks and localStorage
                 window.localStorage.setItem("tasks", JSON.stringify(arrayTasks));
                 if (result.innerHTML == "") {
                         arrayTasks = [];
                         result.innerHTML = ""
                         window.localStorage.setItem("tasks", JSON.stringify(arrayTasks));
-                        check_del();
                 }
             }
         })
@@ -145,7 +146,7 @@ result.addEventListener("click", (e) => {
                     document.getElementById("save").remove();
                     document.getElementById("del").remove();
                     add_task.style.display = "block";
-                    show.className = "fa-solid fa-eye";
+                    e.target.className = "fa-solid fa-eye";
                 }
                 
                 delAll.onclick = function() {
@@ -163,6 +164,8 @@ result.addEventListener("click", (e) => {
 function check_del(){
     if(arrayTasks.length > 1) {
         delAll.style.display = "block";
+    } else {
+        delAll.style.display = "none";
     }
 }
 // delete all task
